@@ -1,4 +1,4 @@
-// Assignment Code
+// Password Generator
 
 //#################################### FUNCTION - Write password to the #password input ###################
 
@@ -61,12 +61,13 @@ function generatePassword() {
       validCharTypes++
       allChoices.push(specialCharChoices)
     }
+    // Send alert to select at least one char type if none are selected and restart loop if none selected
     if (validCharTypes == 0) {
-      alert("Please select at least one char acter type to include in your password")
+      alert("Please select at least one character type to include in your password")
     }
   }
 
-  // 
+  // concateneate elements from selected arrays to create password
   for (var i = 0; i <= passwordLength; i++) {
     var allChoicesLen = allChoices.length
     var n = Math.floor(allChoicesLen*Math.random())
